@@ -1,0 +1,198 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to left, rgb(0, 0, 0), rgb(0, 11, 83));
+}
+
+.container {
+  width: 95%;
+  height: 95%;
+  background: #ffffff30;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 50%;
+  height: 40%;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  color: white;
+  overflow: hidden;
+  box-shadow: 1px 1px 10px rgb(255, 255, 255);
+  /* text-shadow: 1px 1px 1px black; */
+
+}
+
+.box:hover {
+  box-shadow: none;
+}
+
+.dragactivenone {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  /* transition: all 0.5s ease-in-out; */
+}
+
+.dragactivenone:hover {
+  background: #c7c7c724;
+  padding: 10px;
+}
+
+.dragactive {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #c7c7c724;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button {
+  width: 30%;
+  height: 35px;
+  margin-top: 30px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 3px rgb(0, 0, 0);
+  font-size: 15px;
+  background-color: rgb(4, 70, 183);
+  transition: all 0.3s ease-in-out;
+  color: white;
+  background: linear-gradient(to left, rgb(158, 15, 171), rgb(4, 23, 146));
+}
+
+button:hover {
+  background: linear-gradient(to left, rgb(4, 23, 146), rgb(158, 15, 171));
+  font-weight: 500;
+}
+
+/* Loader */
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  margin-top: 30px;
+  border-radius: 50%;
+  border-top: 5px solid rgb(255, 255, 255);
+  /* box-shadow: 0px 0px 10px white; */
+  border-right: 5px solid grey;
+  border-left: 5px solid grey;
+  border-bottom: 5px solid grey;
+  animation: roll 1s infinite;
+}
+
+@keyframes roll {
+  0% {
+      transform: rotate(0);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.text {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+
+}
+.load {
+  color: white;
+  font-size: 18px;
+  width: 110px;
+  height: 17.5px;
+  /* overflow: hidden; */
+
+}
+
+.load::after {
+  display: inline-block;
+  animation: dotty steps(1,end) 1s infinite;
+  content: '';
+}
+
+@keyframes dotty {
+  0%   { content: ''; }
+  25%  { content: '.'; }
+  50%  { content: '..'; }
+  75%  { content: '...'; }
+  100% { content: ''; }
+}
+
+.time {
+  color: white;
+  margin-top: 1rem;
+}
+
+/* Error handling */
+
+.errorbox {
+  height: 40%;
+  width: 50%;
+  background-color: rgba(255, 0, 0, 0.648);
+  color: white;
+  border: 2px solid black;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  padding: 15px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px black;
+  animation: error 0.3s;
+}
+
+.errorbox .cross {
+  width: 95%;
+  height: 30%;
+  text-align: right;
+  font-size: 25px;
+}
+
+.errorbox .errormsg {
+  text-align: center;
+  transition: all 0.2s ease-in;
+  text-shadow: 1px 1px 1px black;
+  font-size: 17px;
+
+}
+
+.errorbox .cross span {
+  cursor: pointer;
+  text-shadow: 1px 1px 1px black;
+}
+
+.errorbox .cross span:hover {
+  text-shadow: none;
+
+}
+
+@keyframes error {
+  0% {
+      transform: translateY(-250px);
+  }
+}
