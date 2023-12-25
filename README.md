@@ -1,7 +1,7 @@
 
 # Video Transcoder
 
-This is a Video Transcoder app, Here you can Transcode your video into diffrent formt. Built with the ReactJS, Nodejs, Express ,FFMPEG 
+This is a Video Transcoder app, Here you can Transcode your video into different formats. Built with the ReactJS, Nodejs, Express, FFMPEG 
 
 
 
@@ -11,7 +11,7 @@ To get a local copy up and running, please follow these simple steps.
 
 ## Prerequisites
 
-Here is what you need to be able to run Video Transcoder
+Here is what you need to be able to run a Video Transcoder
 
 ``Node.js (Version: >=18.x)``
 
