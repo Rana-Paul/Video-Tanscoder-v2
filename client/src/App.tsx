@@ -61,7 +61,7 @@ function App() {
     <>
       <div className="App">
         <div className="container">
-          {/* if err then show it here using err.msg*/}
+          {/* if err then show it here using err.msg */}
           {catcherr ? (
             <div className="errorbox">
               <div className="cross">
@@ -75,7 +75,7 @@ function App() {
                 </span>
               </div>
               <div className="errormsg">
-                <p>{error?.msg} OR watch this Demo Video {demo}</p>
+                <p>{error?.msg} OR watch this Demo Video: {demo}</p>
               </div>
             </div>
           ) : (
@@ -85,7 +85,7 @@ function App() {
 
                 {isDragActive ? (
                   <div className="dragactive">
-                    <p>Drop the files here ...</p>
+                    <p>Drop the files here...</p>
                   </div>
                 ) : (
                   <div className="dragactivenone">
