@@ -11,7 +11,7 @@
   width: 95%;
   height: 95%;
   background: #ffffff30;
-  border-radius: 25px;
+  border-radius: 26px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,7 +40,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 10px;
+  padding: 9px;
   /* transition: all 0.5s ease-in-out; */
 }
 
